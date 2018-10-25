@@ -14,7 +14,6 @@ class SegTree(object):
         segroot=[None]*nodeInSegTree
         self.segUtil(arr,0,size-1,segroot,0)
         return segroot
-
     def segUtil(self,arr,sa,ea,segroot,ss):
         mid =int(sa+((ea-sa)/2))
         if sa==ea:
@@ -44,8 +43,6 @@ class SegTree(object):
 
         mid=int(ss+(se-ss)/2)
         return self.rangeQueryUtil(segroot,ss,mid,qs,qe,si*2+1)+self.rangeQueryUtil(segroot,mid+1,se,qs,qe,si*2+2)
-
-
 
 
 #driver program
