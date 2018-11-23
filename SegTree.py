@@ -7,8 +7,9 @@ class SegTree(object):
 
     def createSegTree(self,arr):
         size=len(arr)
+        #for height of the tree
         height=math.ceil(math.log2(size))
-        # print(height)
+        #Allocate the memory for segment tree
         nodeInSegTree=int((math.pow(2,height+1))-1)
         # print(nodeInSegTree)
         segroot=[None]*nodeInSegTree
