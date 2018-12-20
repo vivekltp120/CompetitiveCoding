@@ -163,6 +163,18 @@ def remove_leading_zero():
         split_ip='.'.join(str(x) for x in split_ip)
         print(split_ip)
 
+#left and right roatation of array
+def left_and_right():
+    arr=[map(lambda x:int(x),[x for x in input().split()])]
+    d=2
+    n=len(arr)
+    temp=[0 for x in range(n)]
+    for i in range(n):
+        temp[((i-d)%n+n)%n]=arr[i]
+
+    print(temp)
+
+
 
 
 
@@ -174,4 +186,5 @@ if __name__=="__main__":
       # major_element()
       # ease_of_array()
       # nearest_multiple_10()
-      remove_leading_zero()
+      # remove_leading_zero()
+      left_and_right()
