@@ -70,19 +70,30 @@ def matrix_chain_multiplication():
     d=[]
     mlen=len(mat)
     m=[[0 for x in range(mlen+1)] for y in range(mlen+1)]
+    s=[[0 for x in range(mlen+1)] for y in range(mlen+1)]
     for x in mat:
-        d.extend([int(y) for y in x.split('*')])
+        d.extend([int(y) for y in x.split('*') if int(y) not in d])
+    print('dimension-'+str(d))
 
     for i in range(1,mlen+1):
         for j in range(1,mlen+1):
-            temp=[]
+            temp={}
             for k in range(i,j):
-                temp.append(m[i][k]+m[k+1][j]+d[i-1]*d[j]*d[k])
-                print(temp)
+                temp.__setitem__(m[i][k]+m[k+1][j]+d[i-1]*d[j]*d[k],k)
+
             if temp:
              m[i][j]=min(temp)
+             s[i][j]=temp[min(temp)]
 
-    print(m)
+    getMatrix(s,1,4)
+def getMatrix(s,i,j):
+    if i==j:
+      return
+    getMatrix(s, i, s[i][j])
+    getMatrix(s, s[i][j] + 1, j)
+    print(s[i][j])
+
+
 
 
 
