@@ -57,15 +57,32 @@ def knapsack_problem():
                 p=0
 
             if w-wdict[i][1]>=0 and i-1 >= 0:
-                q=profitmatrix[i-1][w-wdict[i][1]]
+                q=profitmatrix[i-1][w-wdict[i][1]]+wdict[i][0]
             else:
                 q=0
 
-            profitmatrix[i][w]=max(p,q+wdict[i][0])
+            profitmatrix[i][w]=max(p,q)
 
     print(profitmatrix)
+#Matrix chain multiplication
+def matrix_chain_multiplication():
+    mat=['5*4','4*6','6*2','2*7']
+    d=[]
+    mlen=len(mat)
+    m=[[0 for x in range(mlen+1)] for y in range(mlen+1)]
+    for x in mat:
+        d.extend([int(y) for y in x.split('*')])
 
+    for i in range(1,mlen+1):
+        for j in range(1,mlen+1):
+            temp=[]
+            for k in range(i,j):
+                temp.append(m[i][k]+m[k+1][j]+d[i-1]*d[j]*d[k])
+                print(temp)
+            if temp:
+             m[i][j]=min(temp)
 
+    print(m)
 
 
 
@@ -73,4 +90,5 @@ def knapsack_problem():
 
 if __name__=='__main__' :
     # longest_common_subsequence('abcde','bd')
-    knapsack_problem()
+    # knapsack_problem()
+    matrix_chain_multiplication()
