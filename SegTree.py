@@ -40,7 +40,7 @@ class SegTree(object):
 
 
         if (se < qs or ss > qe):
-            return 0;
+            return 0
 
         mid=int(ss+(se-ss)/2)
         return self.rangeQueryUtil(segroot,ss,mid,qs,qe,si*2+1)+self.rangeQueryUtil(segroot,mid+1,se,qs,qe,si*2+2)
