@@ -45,6 +45,11 @@ def sum_of_two():
             print( str(i)+" "+str(com_index))
             return
     return -1
+#catalan number for the given number
+def catalan_number(n):
+    #first method by formula
+    #C(n)=C(i)C(n-1-i)
+    pass
 
 
 

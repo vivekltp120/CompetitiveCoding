@@ -8,6 +8,7 @@ def getlcs(a,x):
     print('Longest Common Subsequence -'+ lcs)
 
 def longest_common_subsequence(x,y):
+    print('Longest Common Subsequence:')
     len_x=len(x)
     len_y=len(y)
     s=[[0 for i in range(len_y+1)] for j in range(len_x+1)]
@@ -31,6 +32,7 @@ def longest_common_subsequence(x,y):
     getlcs(a,x)
 #find the maximum profit for given weight
 def createDictAndMaximumWeight():
+    print('Knapsack Problem:')
     wdict=[]
     infile=open('knapsack.txt','r')
     for line in infile.readlines():
@@ -40,9 +42,9 @@ def createDictAndMaximumWeight():
     wdict.sort()
     print(wdict)
     for i in range(len(wdict)):
-        print(wdict[i][1])
+        print(wdict[i][1],end=' ')
     print('Give the max weight for which object will be selected')
-    m=int(input())
+    m= 8#int(input())
     return wdict,m
 
 def knapsack_problem():
@@ -66,6 +68,7 @@ def knapsack_problem():
     print(profitmatrix)
 #Matrix chain multiplication
 def matrix_chain_multiplication():
+    print('Matrix Chain Multiplication:')
     mat=['5*4','4*6','6*2','2*7']
     d=[]
     mlen=len(mat)
@@ -84,14 +87,14 @@ def matrix_chain_multiplication():
             if temp:
              m[i][j]=min(temp)
              s[i][j]=temp[min(temp)]
-
+    print('Order of matrix is:',end='')
     getMatrix(s,1,4)
 def getMatrix(s,i,j):
     if i==j:
       return
     getMatrix(s, i, s[i][j])
     getMatrix(s, s[i][j] + 1, j)
-    print(s[i][j])
+    print('A%d*'%(s[i][j]),end='')
 
 
 
@@ -100,6 +103,6 @@ def getMatrix(s,i,j):
 
 
 if __name__=='__main__' :
-    # longest_common_subsequence('abcde','bd')
-    # knapsack_problem()
+    longest_common_subsequence('abcde','bd')
+    knapsack_problem()
     matrix_chain_multiplication()

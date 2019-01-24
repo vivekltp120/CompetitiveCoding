@@ -10,7 +10,7 @@ class SLL(object):
           self.head=None
 
 
-      def insertfront(self,data):
+      def appendfront(self,data):
           if self.head==None:
               self.head=node(data)
 
@@ -22,14 +22,14 @@ class SLL(object):
       def gethead(self):
           return self.head
 
-      def printlist(self):
+      def display(self):
           temp=self.gethead()
           while temp!=None:
               print(str(temp.data),end ='-->')
               temp=temp.next
           print('Null')
 
-      def inserttail(self,data):
+      def append(self, data):
           if self.gethead()==None:
               self.head=node(data)
           else:
@@ -39,7 +39,7 @@ class SLL(object):
               newnode=node(data)
               temp.next=newnode
 
-      def reverselist(self):
+      def reverse(self):
           prev=None
           curr=self.gethead()
           while curr != None:
@@ -57,8 +57,8 @@ if __name__=='__main__':
     slt=SLL()
     for x in a:
         print(x)
-        slf.insertfront(x)
-        slt.inserttail(x)
-    slf.reverselist()
-    slf.printlist()
-    slt.printlist()
+        slf.appendfront(x)
+        slt.append(x)
+    slf.reverse()
+    slf.display()
+    slt.display()
