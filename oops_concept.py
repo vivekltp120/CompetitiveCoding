@@ -27,7 +27,7 @@ class tiger(animal,wild):
     def __init__(self):
         animal.__init__(self)
         wild.__init__(self)
-
+    
     def body(self):
         print('This is the tiger')
         animal.body(self)

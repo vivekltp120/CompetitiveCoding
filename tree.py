@@ -103,6 +103,7 @@ class Tree(object):
         temp=self.getRoot()
         print(temp)
         stack=[]
+        curr=None
         # stack.append(temp)
         print("Iterative postorder traversal:")
         while True:
@@ -111,19 +112,19 @@ class Tree(object):
                 stack.append(temp)
                 temp=temp.left
 
-            print([x.data for x in stack])
+            # print([x.data for x in stack])
             if len(stack)==0:
-                break
+                return
 
-            x=stack.pop()
-            print(x.data)
-            if x.right!=None and stack[-1].data!=x.data:
-                stack.append(x)
-                temp=x.right
+            curr=stack.pop()
+
+            if curr.right!=None and stack[-1]!=curr:
+                stack.append(curr)
+                temp=curr.right
 
             else:
-                print(x.data)
-                temp=None
+                print(curr.data)
+                curr=None
 
 #difference of odd even level sum in tree
     def odd_even_level_diff(self):
@@ -266,8 +267,8 @@ if __name__=='__main__':
     # root.inorder()
     # root.preorder()
     # root.inorderIterative()
-    root.iterative_postorder()
+    # root.iterative_postorder()
     # root.odd_even_level_diff()
     # root.max_of_level()
-    # root.zigzag_order()
+    root.zigzag_order()
     # root.vertical_hd()

@@ -36,8 +36,8 @@ def createDictAndMaximumWeight():
     wdict=[]
     infile=open('knapsack.txt','r')
     for line in infile.readlines():
-     p,w=[int(x) for x in line.split()]
-     wdict.append((p,w))
+        p,w=[int(x) for x in line.split()]
+        wdict.append((p,w))
     wdict.append((0,0))
     wdict.sort()
     print(wdict)
@@ -82,27 +82,57 @@ def matrix_chain_multiplication():
         for j in range(1,mlen+1):
             temp={}
             for k in range(i,j):
-                temp.__setitem__(m[i][k]+m[k+1][j]+d[i-1]*d[j]*d[k],k)
+                temp[m[i][k]+m[k+1][j]+d[i-1]*d[j]*d[k]]=k
 
             if temp:
-             m[i][j]=min(temp)
-             s[i][j]=temp[min(temp)]
+                m[i][j]=min(temp)
+                s[i][j]=temp[min(temp)]
     print('Order of matrix is:',end='')
     getMatrix(s,1,4)
 def getMatrix(s,i,j):
     if i==j:
-      return
+        return
     getMatrix(s, i, s[i][j])
     getMatrix(s, s[i][j] + 1, j)
     print('A%d*'%(s[i][j]),end='')
 
 
+# coin sum dynamic
+
+def coin_sum(a, s):
+    t = [[-1 for x in range(s + 1)] for y in range(len(a))]
+
+    for j in range(s + 1):
+        t[0][j] = 1
+    for i in range(len(a)):
+        t[i][0] = 1
+    for i in range(1, len(a)):
+        for j in range(s + 1):
+            if j < a[i]:
+                t[i][j] = t[i - 1][j]
+
+            else:
+                if (j - a[i]) >= 0:
+                    t[i][j] = t[i - 1][j] + t[i][j - a[i]]
+                else:
+                    t[i][j] = t[i - 1][j]
+            print(t)
+
+    return t[len(a) - 1][s]
 
 
+def input_coin_sum():
+    N = int(input())
+    for i in range(N):
+        alen = int(input())
+        arr = [int(x) for x in input().split()]
+        s = int(input())
+        print(coin_sum(arr, s))
 
 
 
 if __name__=='__main__' :
-    longest_common_subsequence('abcde','bd')
-    knapsack_problem()
-    matrix_chain_multiplication()
+    # longest_common_subsequence('abcde','bd')
+    # knapsack_problem()
+    # matrix_chain_multiplication()
+    input_coin_sum()

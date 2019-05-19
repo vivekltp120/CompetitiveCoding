@@ -1,14 +1,10 @@
 import re
 
-text='667-567-134 give me Mr. Vaibhav Mr. T Mr. Prashant the phone number,and emailid.phone number is 9450037508.email id is vivekltp120@gmail.com chaurasiavivek87@gmail.com'
+text='667-567-134 give me Mr. Vaibhav Mr. T Mr. Prashant the phone number,and emailid.' \
+     'phone number is 9450037508.email id is vivekltp120@gmail.com ' \
+     'chaurasiavivek87@gmail.com'
 text2='''
-Mr. Vivek
-Mr Vaibhav
-vivekltp120@gmail.com
-vaibhav@aol.com
-https://www.google.com
-http://amazon.com
-https://edureka.edu
+Mr. Vivek Mr Vaibhav vivekltp120@gmail.com vaibhav@aol.com https://www.google.com http://amazon.com https://edureka.edu
 
 '''
 

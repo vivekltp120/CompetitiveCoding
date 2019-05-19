@@ -7,6 +7,8 @@ def func():
     print(a)
 
 func()
-for i in reversed(range(1,3)):
+for i in reversed(range(0,3)):
     print(a)
     print(i)
+
+
