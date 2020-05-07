@@ -23,7 +23,6 @@ MarkupSafe==1.0
 oauth==1.0.1
 olefile==0.45.1
 pexpect==4.2.1
-Pillow==5.1.0
 protobuf==3.0.0
 pycairo==1.16.2
 pycrypto==2.6.1
@@ -37,7 +36,6 @@ python-debian==0.1.32
 pytz==2018.3
 pyxattr==0.6.0
 pyxdg==0.25
-PyYAML==3.12
 reportlab==3.4.0
 requests==2.18.4
 requests-unixsocket==0.1.5
