@@ -1,37 +1,40 @@
-class animal(object):
+class Animal(object):
     def __init__(self):
         print('This is the base class')
 
     def body(self):
-         print ('This is the body for animal')
+        print('This is the body for Animal')
+
 
 class pet(object):
     def __init__(self):
-        print('This is pet animal')
+        print('This is pet Animal')
 
-class wild(object):
-    def __init__(self):
-        print('This is wild animal')
 
-class dog(animal,pet):
+class Wild(object):
     def __init__(self):
-        animal.__init__(self)
+        print('This is Wild Animal')
+
+
+class dog(Animal, pet):
+    def __init__(self):
+        Animal.__init__(self)
         pet.__init__(self)
 
     def body(self):
         print('This is dog')
-        animal.body(self)
+        Animal.body(self)
 
 
-class tiger(animal,wild):
+class Tiger(Animal, Wild):
     def __init__(self):
-        animal.__init__(self)
-        wild.__init__(self)
-    
+        Animal.__init__(self)
+        Wild.__init__(self)
+
     def body(self):
-        print('This is the tiger')
-        animal.body(self)
+        print('This is the Tiger')
+        Animal.body(self)
 
 
-if __name__=='__main__':
-      t=tiger()
+if __name__ == '__main__':
+    t = Tiger()
