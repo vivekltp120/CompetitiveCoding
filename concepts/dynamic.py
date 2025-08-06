@@ -4,16 +4,50 @@ t = None
 
 
 def getlcs(a, x):
+    """
+    This function retrieves the longest common subsequence from the matrix 'a' and string 'x'.
+    Args:
+       a (list): 2D list representing the direction of the longest common subsequence
+       x (str): The original string from which the longest common subsequence is derived.
+    Returns:
+       None: This function prints the longest common subsequence.
+    """
+    print('Get LCS:')
+    if not a or not x:
+        print('No common subsequence found.')
+        return
+    if len(a) == 0 or len(x) == 0:
+        print('No common subsequence found.')
+        return
+    if len(a) != len(x):
+        print('Invalid input: Length of direction matrix and string do not match.')
+        return
+    if not isinstance(a, list) or not all(isinstance(row, list) for row in a):
+        print('Invalid input: Direction matrix must be a 2D list.')
+        return
+    if not isinstance(x, str):
+        print('Invalid input: String must be of type str.')
+        return
+    if not all(isinstance(item, str) for item in x):
+        print('Invalid input: String must contain only characters.')
+        return
     lcs = ''
     for i in range(len(a)):
         for j in range(len(a[i])):
             if a[i][j] == 'diagonal':
                 lcs += x[i]
-    print('Longest Common Subsequence -' + lcs)
+    print('Longest Common Subsequence - ' + lcs)
 
 
 def longest_common_subsequence(x, y):
-    print('Longest Common Subsequence:')
+    """
+    This function finds the longest common subsequence (LCS) of two strings using dynamic programming.
+    Args:
+       x (str): The first string.
+       y (str): The second string.
+    Returns:
+       None: This function prints the longest common subsequence.
+    """
     len_x = len(x)
     len_y = len(y)
     s = [[0 for i in range(len_y + 1)] for j in range(len_x + 1)]
@@ -39,6 +73,13 @@ def longest_common_subsequence(x, y):
 
 # find the maximum profit for given weight
 def createDictAndMaximumWeight():
+    """
+    This function creates a dictionary of items with their profits and weights,
+    and returns the dictionary along with a maximum weight for which items will be selected.
+    Returns:
+       tuple: A tuple containing the dictionary of items and the maximum weight.
+    """
+    
     print('Knapsack Problem:')
     wdict = []
     infile = open('knapsack.txt', 'r')
@@ -56,6 +97,16 @@ def createDictAndMaximumWeight():
 
 
 def knapsack_problem():
+    """
+    This function solves the knapsack problem using dynamic programming.
+    It creates a profit matrix based on the items' profits and weights,
+    and calculates the maximum profit for a given weight limit.
+    Returns_______
+       None: This function prints the profit matrix.
+    """
+    global t
+    print('Knapsack Problem:')
+    t = None
     wdict, m = createDictAndMaximumWeight()
     n = len(wdict)
     profitmatrix = [[0 for x in range(m + 1)] for y in range(n)]
@@ -256,7 +307,7 @@ def sub_string_without_repeating(arr):
 if __name__ == '__main__':
 
     # code = input("\nWhich dynamic code you want to be executed ")
-    code = "Perm"
+    code = "lcs"
 
     match code:
         case "lcs":

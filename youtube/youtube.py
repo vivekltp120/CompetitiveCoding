@@ -6,7 +6,10 @@ import os
 import yt_dlp
 cur_dir=os.getcwd()
 def download_audio(link):
-  with yt_dlp.YoutubeDL({'extract_audio': True, 'format': 'bestaudio', 'outtmpl': os.path.join(cur_dir, '%(title)s.mp3')}) as video:
+  yt_option={'extract_audio': True, 'format': 'bestaudio', 'outtmpl': os.path.join(cur_dir, '%(title)s.mp3')}
+  if link.contains('playlist'):
+    yt_option.update({'batch-file': True})
+  with yt_dlp.YoutubeDL() as video:
     info_dict = video.extract_info(link, download = True)
     video_title = info_dict['title']
     print(video_title)

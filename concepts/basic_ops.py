@@ -30,6 +30,23 @@ def odd_number(x):
 
 
 def exp_map(a):
+    """
+    This function demonstrates the use of map with different functions
+    Applies multiple functions to each element in the input list and demonstrates the use of `map`.
+    Parameters
+    ----------
+    a : list
+        A list of numeric values to which the functions will be applied.
+    Returns
+    -------
+    None
+        This function prints the results of mapping different functions over the input list.
+    Notes
+    -----
+    This function assumes that the functions `square`, `cube`, and `area_circle` are defined elsewhere in the code.
+    It prints intermediate results for demonstration purposes.
+    """
+    
     result = []
     for i in a:
         print("map experiment:\n")
@@ -39,12 +56,53 @@ def exp_map(a):
 
 
 def exp_filter(a):
+    """
+    This function demonstrates the use of filter to extract odd numbers from a list.
+    Parameters
+    ----------
+    a : list
+        A list of numeric values from which odd numbers will be filtered.
+    Returns
+    -------
+    None
+        This function prints the results of filtering odd numbers from the input list.
+    Notes
+    -----
+    This function assumes that the function `odd_number` is defined elsewhere in the code.
+    It prints the filtered results for demonstration purposes.
+    """
     print("filter experiment:\n")
     result = (list(filter(odd_number, a)))
     print('In filter:' + str(result))
 
 
 def bit_operation():
+    """
+    This function demonstrates various bitwise operations and conversions between binary, octal, and hexadecimal representations.
+    It performs operations such as bitwise OR, AND, XOR, right shift, left shift, and conversions.
+    Returns
+    -------
+    None
+        This function prints the results of the bitwise operations and conversions.
+    Notes
+    -----
+    This function uses fixed values for `x` and `y` to demonstrate the operations.
+    It prints the results for demonstration purposes.
+    """
+    global a, b, arr
+    a = 8
+    b = 10
+    arr = [1, 2, 3, 4, 5]
+    print("Bit operation experiment:\n")
+    print('a = ' + str(a) + ' b = ' + str(b))
+    print('Or - ' + str(a | b))
+    print('And - ' + str(a & b))
+    print('Xor - ' + str(a ^ b))
+    print('Right Shift - ' + str(a >> 2) + ' -> ' + str(bin(a >> 2)))
+    print('X - ' + str(bin(a)))
+    print('Left Shift - ' + str(a << 2) + ' -> ' + str(bin(a << 2)))
+    print('Binary {0} to Dec {1} '.format(bin(a), int(bin(a), 2)))
+    print('Oct {0} to Dec {1} '.format(oct(a), int(oct(a), 8)))                     
     x = 1024
     y = 10
     print("bit operation experiment:\n")
@@ -62,25 +120,148 @@ def bit_operation():
 
 
 def dir_operation(path):
-    # implementation of walk
-    for root, dirpath, file in os.walk(path):
-        # print ('root'+str(root)+'dirpath-'+str((dirpath))+'file'+str(file))
-        print('file - ' + str(dirpath))
+    """
+    This function walks through the directory structure starting from the given path and prints the directories.
+    Parameters
+    ----------
+    path : str
+        The path to the directory to be traversed.
+    Returns
+    -------
+    None
+        This function prints the directories found during the traversal.
+    Notes
+    -----
+    This function uses `os.walk` to traverse the directory structure.
+    It prints the directories found at each level of the traversal.
+    """
+    print("Directory operation experiment:\n")
+    if not os.path.exists(path):
+        print("Path does not exist: " + path)
+        return
+    if not os.path.isdir(path):
+        print("Path is not a directory: " + path)
+        return
+    print('Traversing directory: ' + path)
+    print('Directories and files in the path:\n')
+    # os.walk returns a generator that yields a tuple of (root, dirnames, filenames)
+    # where root is the current directory path, dirnames is a list of directories in that path,
+    # and filenames is a list of files in that path.
+    # Here we are only printing the directories (dirnames) found in the path.
+    # If you want to print files as well, you can modify the print statement accordingly.
+    # Note: dirpath is the list of directories in the current root, not the files.
+    # If you want to print files, you can use file in the for loop.
+    # os.walk(path) will traverse the directory tree starting from the given path
+    # and yield tuples of (root, dirnames, filenames) for each directory it visits.
+    # The root is the current directory path, dirpath is a list of directories in that path,        
+    for root, dirnames, filenames in os.walk(path):
+        # print ('root'+str(root)+'dirnames-'+str((dirnames))+'filenames'+str(filenames))
+        print('Directories - ' + str(dirnames))
+        print('Files - ' + str(filenames))
 
 
 def yield_exp():
+    """
+    This function is a generator that yields the square of numbers from 0 to 4.
+    It demonstrates the use of a generator to produce a sequence of values.
+    Yields
+    ------
+    int
+        The square of the current number in the range from 0 to 4.
+    Notes
+    -----
+    This function uses a for loop to iterate through the range and yields the square of each number.
+    """
+    print("Yield experiment:\n")
+    print('In yield:')
+    # Using a generator to yield squares of numbers from 0 to 4
+    # This is a simple generator function that yields the square of each number in the range.
+    # The yield statement allows the function to return a value and pause its execution,
+    # so that it can be resumed later to yield the next value.
+    # This is useful for generating a sequence of values without storing them all in memory at once.
+    # This is a simple generator function that yields the square of each number in the range.           
     for i in range(5):
         y = i * i
         yield y
 
 
 def return_exp():
+    """
+    This function demonstrates the use of a return statement to return the current index in a loop.
+    It iterates through a range of numbers and returns the current index.
+    Returns
+    -------
+    int
+        The current index in the range from 0 to 4.
+    Notes
+    -----
+    This function uses a for loop to iterate through the range and returns the current index.
+    """
+    print("Return experiment:\n")
+    print('In return:')
+    # Using a return statement to return the current index in a loop
+    # This is a simple function that returns the current index in the range.
+    # The return statement exits the function and returns the value to the caller.
+    # This is a simple function that returns the current index in the range.
+    # The return statement exits the function and returns the value to the caller.
+    # This is a simple function that returns the current index in the range.
+    # The return statement exits the function and returns the value to the caller.      
     for i in range(5):
         return i
 
 
 # sorted a array with another array
 def activity_time(arr,dep):
+    """
+    This function sorts two lists, `arr` and `dep`, based on the values in `arr`.
+    It uses the `zip` function to pair elements from both lists, sorts them based on the first list,
+    and then unzips them back into two separate lists.
+    Parameters
+    ----------
+    arr : list
+        A list of arrival times.
+    dep : list
+        A list of departure times corresponding to the arrival times in `arr`.
+    Returns
+    -------
+    None
+        This function prints the sorted lists and the zipped list.
+    Notes
+    -----
+    This function assumes that `arr` and `dep` are of the same length.
+    It uses the `zip` function to pair elements from both lists, sorts them based on the first list,
+    and then unzips them back into two separate lists using `map` and `zip`.
+    """
+    print("Activity time experiment:\n")
+    print('Arrival times: ' + str(arr))
+    print('Departure times: ' + str(dep))
+    if len(arr) != len(dep):
+        print("Error: Arrival and departure lists must be of the same length.")
+        return
+    if not arr or not dep:
+        print("Error: Arrival and departure lists cannot be empty.")
+        return
+    if len(arr) == 1:
+        print("Single element in both lists, no sorting needed.")
+        return
+    if len(arr) == 0:
+        print("Both lists are empty, nothing to sort.")
+        return
+    if len(arr) != len(dep):
+        print("Error: Arrival and departure lists must be of the same length.")
+        return
+    print("Sorting the arrays based on arrival times:\n")
+    print("Before sorting:\n")
+    print("Arrival: ", arr)
+    print("Departure: ", dep)
+    # Using zip to pair elements from both lists, sorting based on the first list (arrival times)
+    sorted_array = sorted(zip(arr, dep), key=lambda x: x[0])
+    # Unzipping the sorted pairs back into two separate lists
+    arr, dep = map(list, zip(*sorted_array))
+    print("After sorting:\n")
+    print("Arrival: ", arr)
+    print("Departure: ", dep)
+    print("Sorted pairs (arrival, departure): ", sorted_array)          
     print("Array sorting experiment with zip and unzip:\n")
     sorted_array=sorted(zip(arr,dep),key=lambda x:x[0])
     arr,dep=map(list,zip(*sorted_array))
@@ -96,6 +277,24 @@ class Node(object):
 
 
 def dictionaries():
+    """
+    This functions demonstrates various operations on dictionaries in Python.
+    It includes sorting a list, creating a dictionary, modifying values in a dictionary,
+    using a defaultdict, and an OrderedDict.
+    Parameters
+    ----------
+    None
+    Returns
+    -------
+        None
+    Notes
+    -----
+    This function assumes that the input list and dictionaries are defined within the function.
+    It prints the results of the operations for demonstration purposes.
+    It also demonstrates the use of a defaultdict and an OrderedDict.
+    It shows how to create a dictionary, sort it, and modify its values.
+ 
+    """
     arr = [1, 2, 6, 4, 5]
     print("dict experiment:\n")
 
@@ -139,6 +338,24 @@ def dictionaries():
 
 # for experiment and syntax clarification
 def for_syntax_and_python_concept():
+    """
+    This function demonstrates various Python concepts and operations including directory traversal,
+    bitwise operations, string manipulation, and the use of generators.
+    It includes operations such as converting between different number bases, filtering and mapping lists,
+    and using deque, set, and dictionary operations.
+    Parameters
+    ----------
+    None
+    Returns
+    -------
+        None
+    Notes
+    -----
+    This function assumes that the input path and array are defined within the function.
+    It prints the results of the operations for demonstration purposes.
+    It also demonstrates the use of a generator to yield values, and the use of a return statement to return values.
+    It also demonstrates the use of a generator to yield values, and the use of a return statement to return values.
+    """
     global a, b, arr
     dir_operation(path)
     converer_hex_binary_and_more()
