@@ -1,0 +1,2 @@
+select * from axio limit 10;
+select * from axio group by strftime(''%m-%Y'', date);

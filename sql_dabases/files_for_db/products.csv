@@ -1,0 +1,5 @@
+product_id,product_name,category,price_per_unit
+1,Toothbrush,Personal Care,25.0
+2,Toothpaste,Personal Care,40.0
+3,Soap,Personal Care,30.0
+4,Shampoo,Hair Care,80.0
