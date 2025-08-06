@@ -1,0 +1,61 @@
+Name,Members,Address,Mobile,Comments
+Ankit Ji,4, Lalitpur, 647834246,Family   
+Bua-I,4, Lalitpur, 647834246,Family   
+Bua-II,4, Gwalior, 647834246,Family   
+Bua-III,4, Bilowa, 647834246,Family   
+Chachi, 4, Pali, 647834246, Family   
+Rahul, 4, Lalitpur, 647834246,Family  
+Sachin BhaiShab, 2, Pali, 647834246, Family
+Narendra Jijaji,2,Lalitpur,758589389, Family
+
+Pankaj,4,Jhansi,7534895735 ,Family
+Deepak,4,Jhansi,7534895735 ,Family
+
+Janki Didi,2, Bhopal,7589457,Family
+Dhaniram Bhaiya,2, Bhopal,7589457,Family
+Halle,2,Garaha Kota, 758934589347,Family
+
+Anuj,2,Indore, 758934589347,Family
+Golu,2,Indore, 758934589347,Family
+
+
+Ankitji Ownwer,4,Lalitpur,7534895735 ,Various
+Shishupal bhaishab,4,Lalitpur,7534895735 ,Colony
+Dharmendra, 4, Lalitpur, 647834246, Friend
+Rinkoo BhaiShab, 2, Lalitpur, 647834246, Colony
+Dharmendra BhaiShab, 4, Lalitpur, 647834246, Colony  
+Patel Uncle, 4, Lalitpur,758589389, Colony
+Shivam, 2, Lalitpur,758589389, Colony
+Sudha Aunty, 4, Lalitpur,758589389, Colony
+Suman Aunty, 4, Lalitpur,758589389, Colony
+Componder Uncle, 2, Lalitpur,758589389, Colony
+
+
+
+Shivshankar Bhaishab, 4, Lalitpur,758589389, Tedachers Colony
+Tripathi Bhaishab, 4, Lalitpur,758589389, Tedachers Colony
+Tonte Bhaishab, 4, Lalitpur,758589389, Tedachers Colony
+Jitu, 4, Lalitpur,758589389, Tedachers Colony
+Sen Bhaishab, 4, Lalitpur,758589389, Tedachers Colony
+
+
+Gyaneshwer, 6, Lalitpur,758589389, Tedachers Colony
+Umesh Bahishab, 8, Lalitpur,758589389, Tedachers Colony
+Rambabu Bhaishab, 4, Lalitpur,758589389, Tedachers Colony
+Rambabu Bhaishab Bahan,2,Lalitpur,758589389, Tedachers Colony
+Pawan Bhaishab, 6, Lalitpur,758589389, Tedachers Colony
+Dubey Bhaishab, 2, Lalitpur,758589389, Tedachers Colony
+Mishra Ji, 3, Lalitpur,758589389, Tedachers Colony
+Nagal Bhaishab , 8, Lalitpur,758589389, Tedachers Colony
+Dhaniram Bhaishab, 4, Lalitpur,758589389, Tedachers Colony
+Prakash Bhaishab, 4, Lalitpur,758589389, Tedachers Colony
+Baburam Bhaishab, 4, Lalitpur,758589389, Tedachers Colony
+Hariram Bhaishab, 4, Lalitpur,758589389, Tedachers Colony
+Vijendra Bhaishab, 4, Lalitpur,758589389, Tedachers Colony
+Harishchandra Bhaishab, 4, Lalitpur,758589389, Tedachers Colony
+
+
+
+
+
+

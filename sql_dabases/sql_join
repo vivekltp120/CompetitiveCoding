@@ -1,0 +1,32 @@
+-- Select all info if customer purchase any order join on condition
+select *
+from customer cus
+join orders ord on cus.customer_id=ord.customer_id;
+
+-- Select all info for the customers which purchase any order
+select name 
+from customer cus
+natural join orders ord;
+
+-- SELECT TOTAL NUMBER OF ORDERS FOR each customer
+select name,count(order_id)
+from customer cus
+join orders ord on cus.customer_id=ord.customer_id
+group by cus.name;
+
+-- Get all orders with customer names and their corresponding product names.
+select c.name,p.product_name
+from customer c 
+join orders o on c.customer_id = o.customer_id
+join products p on o.product_id = p.product_id 
+
+--version 2
+select c.name,p.product_name
+from orders o
+join customer c on o.customer_id=c.customer_id
+join products p on o.product_id=p.product_id
+
+--Get first 3 highest selling product
+select product_name from orders 
+order by amount desc
+limit 3

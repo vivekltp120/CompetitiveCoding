@@ -3,8 +3,15 @@ from random import randint
 #Step 1: Connect to MongoDB - Note: Change connection string as needed
 connection = MongoClient(port=27017)
 
+#mongodb connection
 mydb=connection.personaldb
-expendituretb=mydb.expenditure
+expendituredb=mydb.expenditure
+
+
+
+
+
+
 
 
 

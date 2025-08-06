@@ -1,5 +1,7 @@
-idea/
+.idea/
 venv/
+.ipynb_*
 backup/
+expenses
 
 

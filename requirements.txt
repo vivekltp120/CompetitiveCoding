@@ -1,0 +1,67 @@
+# Jupyter Lab
+jupyterlab
+# Data Analysis, Visualization, and Tabulation
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+tabulate
+scikit-learn
+xgboost
+lightgbm
+catboost
+# # Concept Drift and Data Drift
+# alibi-detect
+# evidently
+
+# # SQL and NoSQL Databases
+# sqlalchemy
+# psycopg2-binary
+# pymongo
+
+# # Data Ingestion and ETL
+# apache-airflow
+# apache-beam
+# # Data Validation
+# great_expectations
+# # Data Quality
+# pandas-profiling
+# # Data Versioning
+# dvc
+# # Data Orchestration
+# prefect
+# # Data Cataloging
+# apache-atlas
+# # Data Governance
+# apache-ranger
+# # Data Mesh
+# # Data Mesh is a decentralized approach to data architecture and governance
+# # Data Mesh is not a specific library or tool, but rather a concept that can be implemented using various technologies and frameworks.
+# # Data Mesh is a decentralized approach to data architecture and governance
+# # Data Mesh is not a specific library or tool, but rather a concept that can be implemented using various technologies and frameworks.
+# # Data Mesh is a decentralized approach to data architecture and governance
+# # Data Mesh is not a specific library or tool, but rather a concept that can be implemented using various technologies and frameworks.
+# # Data Mesh is a decentralized approach to data architecture and governance
+
+# # Vector Databases
+# weaviate-client
+# pinecone-client
+# qdrant-client
+# chromadb
+
+# # Vector Similarity Search
+# faiss-cpu
+
+# # Large Language Models (LLM)
+# transformers
+# langchain
+# openai
+
+# # For wordembedding and vectorization
+# sentence-transformers
+# gensim
+
+# Agentic AI and LLM Tools (Open Source)
+# gpt4all
+# llama-index
